@@ -16,6 +16,7 @@ def load_library(file)
 end
 
 def get_japanese_emoticon(file, emoticon)
+<<<<<<< HEAD
   library = load_library(file)
 
  current_emoti = library.find do |key, value| 
@@ -25,6 +26,18 @@ def get_japanese_emoticon(file, emoticon)
     return "Sorry, that emoticon was not found"
   end
   current_emoti[1][:japanese]
+=======
+  meaning_hash = {}
+  
+  load_library(file)
+  meaning.each do |emoticon, value|
+    
+    meaning_hash[emoticon] = {
+      :english => value[0]
+    }
+  end
+  meaning_hash
+>>>>>>> 8952744cba132ca707f33d2c62f924022066c09e
 end
 
 def get_english_meaning(file, emoticon)
